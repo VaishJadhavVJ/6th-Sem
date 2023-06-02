@@ -57,3 +57,22 @@ for i in range(num_vertices):
 
 # Find and print the Minimum Spanning Tree
 g.prim_mst()
+
+
+#EXAMPLES FOR OUTPUT:
+"""EXAMPLE 1: Enter the number of vertices: 4
+Enter the edge weights (separated by space):
+0 1 3 0
+1 0 2 0
+3 2 0 4
+0 0 4 0"""
+
+"""EXAMPLE 2:
+Enter the number of vertices: 6
+Enter the edge weights (separated by space):
+0 1 3 0 0 0
+1 0 2 4 0 0
+3 2 0 5 0 6
+0 4 5 0 7 0
+0 0 0 7 0 8
+0 0 6 0 8 0"""
