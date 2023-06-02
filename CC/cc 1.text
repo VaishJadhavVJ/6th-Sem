@@ -1,0 +1,61 @@
+THEORY:
+
+INTRODUCTION:
+EC2 provides a wide range of instance types optimized for different use cases, such as general-purpose, compute-optimized, memory-optimized, and storage-optimized instances.
+It offers flexible storage options, including Amazon EBS (Elastic Block Store) for persistent block storage and Amazon S3 (Simple Storage Service) for object storage.
+EC2 allows you to configure auto scaling groups to automatically adjust the number of instances based on predefined scaling policies, ensuring optimal performance and cost efficiency.
+With EC2 Spot Instances, you can bid on spare compute capacity and potentially save up to 90% on instance costs compared to On-Demand pricing.
+EC2 offers global infrastructure coverage, allowing you to deploy instances in multiple regions worldwide for improved availability and latency.
+It provides extensive monitoring and management capabilities through AWS CloudWatch, enabling you to monitor resource utilization, set alarms, and automate actions based on defined thresholds.
+
+STEPS FOR CREATING AWS FREE TIER ACCOUNT:
+1. Visit the AWS Free Tier website: Go to https://aws.amazon.com/free and click on "Create an AWS Account."
+2. Sign in or create a new account: If you already have an Amazon.com account, sign in using your existing credentials. Otherwise, click on "Create a new AWS account" and follow the instructions to set up a new account.
+3. Provide account information: Enter your email address, password, and account name. Read and accept the AWS Customer Agreement, and then click on "Create Account and Continue."
+4. Enter contact information: Fill in your name, address, and phone number. Click on "Continue."
+5. Payment information: Enter your payment details. Although it is a free tier account, AWS requires a valid payment method to verify your identity. No charges will be applied unless you exceed the free tier usage limits or use services outside of the free tier.
+6. Phone verification: AWS may require you to verify your identity by phone. Select your country and click on "Call me now" or "Send text message." You will receive a verification code, which you need to enter on the next screen.
+7. Select a support plan: Choose the "Free" plan to continue with the Free Tier account.
+8. Complete the registration: Review your account details and click on "Create Account."
+9.Account verification: AWS will send a verification email to the address you provided. Open the email and follow the instructions to verify your account.
+10. Set up your AWS services: Once your account is verified, you can sign in to the AWS Management Console using your account credentials. From there, you can explore and start using the various AWS services available under the Free Tier.
+
+STEPS FOR LAUNCHING INSTANCE IN EC2:
+To launch an instance on AWS, follow these steps:
+1. Sign in to the AWS Management Console: Go to the AWS homepage (https://aws.amazon.com/) and click on "Sign In to the Console" to access the AWS Management Console using your account credentials.
+2. Open the EC2 service: Once signed in, navigate to the EC2 service by either searching for "EC2" in the search bar or finding it under the "Compute" category in the services menu.
+3. Choose the region: In the top-right corner of the EC2 dashboard, select the AWS region where you want to launch your instance. Keep in mind that not all regions support the same instance types and services.
+4. Click on "Launch Instances": On the EC2 dashboard, click on the "Launch Instances" button to start the instance launch wizard.
+5. Select an Amazon Machine Image (AMI): Choose an AMI from the provided list. AMIs are pre-configured templates that contain an operating system and often include additional software.
+6. Choose an Instance Type: Select the instance type based on your requirements. Instance types vary in terms of computing power, memory, storage, and network performance.
+7. Configure Instance Details: Configure the instance settings, including the number of instances to launch, network settings, subnet, security groups, and other options. You can also add user data or enable advanced features if needed.
+8. Add Storage: Specify the storage requirements for your instance. You can add or modify the instance's root volume and attach additional volumes as per your needs.
+9. Configure Security Groups: Define the security group rules to control inbound and outbound traffic to your instance. You can create a new security group or choose an existing one.
+10. Review and Launch: Review all the selected settings and configurations. If everything looks correct, click on "Launch" to proceed.
+11. Select a Key Pair: Choose an existing key pair or create a new one. Key pairs are used for secure SSH access to the instance.
+12. Launch Confirmation: AWS will display a confirmation screen notifying you that your instances are launching. Click on "View Instances" to monitor the launch progress.
+13. Access and Manage the Instance: Once the instance status changes to "running," you can connect to it using various methods like SSH for Linux instances or RDP for Windows instances. You can also manage the instance, perform actions, and monitor its performance through the EC2 dashboard.
+
+STEPS FOR TO CONNECT TO THE EC2 INSTANCE:
+1. Sign in to the AWS Management Console: Go to the AWS homepage (https://aws.amazon.com/) and click on "Sign In to the Console" to access the AWS Management Console using your account credentials.
+2. Open the EC2 service: Once signed in, navigate to the EC2 service by either searching for "EC2" in the search bar or finding it under the "Compute" category in the services menu.
+3. Select your running instance: From the EC2 dashboard, click on "Instances" in the left navigation pane. You will see a list of your running instances. Note the instance's public IP or DNS name.
+4. Set up the necessary access permissions: Before connecting to the instance, ensure that you have the required access permissions. If necessary, configure the security group associated with the instance to allow inbound SSH (for Linux) or RDP (for Windows) traffic.
+5. Connect using SSH (Linux instances) or RDP (Windows instances):
+SSH: If connecting to a Linux instance, open your preferred SSH client (e.g., Terminal on macOS/Linux or PuTTY on Windows). Use the following command to connect:
+ssh -i /path/to/key.pem username@public-ip-or-DNS-name
+6. Replace /path/to/key.pem with the path to your private key file, username with the appropriate username for your AMI (e.g., "ec2-user" for Amazon Linux), and public-ip-or-DNS-name with the public IP or DNS name of your instance.
+7. RDP: If connecting to a Windows instance, open the Remote Desktop client on your local machine. Enter the instance's public IP or DNS name and click "Connect." Provide the appropriate username and password associated with your Windows instance.
+8. Access and manage the instance: After successfully connecting, you will have command-line or graphical access to the EC2 instance. You can now perform various tasks such as installing software, configuring services, and managing your instance as needed.
+
+To configure an instance on AWS:
+Launch an EC2 instance from the AWS Management Console.
+Select the desired Amazon Machine Image (AMI) and instance type.
+Configure the instance details, such as network settings, security groups, and storage.
+Review the configuration and launch the instance.
+Once the instance is running, connect to it using SSH (for Linux) or RDP (for Windows) protocols.
+Install any necessary software, configure services, and update the instance as needed.
+Set up security measures, such as configuring firewalls, enabling encryption, and managing access control.
+Configure monitoring and logging to track the instance's performance and security.
+Implement backup and disaster recovery solutions to protect your instance and data.
+Regularly manage and maintain the instance, including applying updates, optimizing performance, and scaling resources as required.
