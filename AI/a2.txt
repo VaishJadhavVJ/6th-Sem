@@ -1,0 +1,36 @@
+Introduction:
+The A* (A-star) algorithm is a popular search algorithm used to solve pathfinding problems. It is particularly effective for solving the 8-puzzle problem, a sliding puzzle game played on a 3x3 grid with eight numbered tiles and an empty space. The objective is to rearrange the tiles from a given initial configuration to a desired goal state by sliding them into the empty space.
+A* uses a heuristic function to estimate the cost of reaching the goal from a given state. The formula for A* is:
+f(n) = g(n) + h(n)
+where:
+f(n) is the evaluation function of a node
+g(n) is the cost of the path from the start node to node n
+h(n) is the estimated cost from node n to the goal node (heuristic function)
+
+Algorithm:
+The A* algorithm combines the advantages of both Dijkstra's algorithm and a heuristic function to efficiently find the optimal solution. It maintains two lists: the open list and the closed list. The open list stores the nodes that are yet to be evaluated, while the closed list contains the nodes that have already been evaluated. The algorithm proceeds as follows:
+
+Initialize the open list with the initial state of the puzzle and an empty closed list.
+While the open list is not empty:
+a. Select the node with the lowest total cost (g(n) + h(n)), where g(n) is the cost of reaching the current node and h(n) is the estimated cost from the current node to the goal state.
+b. If the selected node is the goal state, terminate the algorithm and return the solution path.
+c. Generate the successors of the selected node (possible moves of the empty space).
+d. For each successor:
+If it is already in the closed list, skip it.
+If it is not in the open list, add it to the open list and calculate its g(n) and h(n) values.
+If it is already in the open list, update its g(n) value if the new path has a lower cost.
+If the open list is empty and a solution has not been found, terminate the algorithm (no solution exists).
+The heuristic function used in the A* algorithm is crucial for guiding the search towards the goal state efficiently. In the case of the 8-puzzle problem, a commonly used heuristic is the Manhattan distance, which calculates the sum of the distances between each tile and its desired goal position.
+
+Example of the 8-Puzzle Problem:
+Let's consider the following initial configuration of the 8-puzzle:
+2 8 3
+1   4
+7 6 5
+
+The goal state is:
+1 2 3
+8   4
+7 6 5
+
+Using the A* algorithm with the Manhattan distance heuristic, the solution path for this problem would involve a sequence of moves to slide the tiles into the empty space, eventually reaching the goal state. The algorithm would explore different states until the optimal solution is found.

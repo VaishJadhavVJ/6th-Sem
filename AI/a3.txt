@@ -1,0 +1,323 @@
+||A3 ALL THEORY||
+
+
+
+1) SELECTION SORT:
+
+Introduction:
+Greedy search is a problem-solving approach that makes locally optimal choices at each step, with the hope that these choices will lead to a globally optimal solution. One practical application of the greedy search algorithm is in the sorting algorithm known as Selection Sort. It is a simple and intuitive comparison-based sorting algorithm that repeatedly selects the smallest element from an unsorted portion of the array and swaps it with the element in the correct position.
+
+Algorithm:
+Start with an unsorted array of elements.
+Find the minimum element from the unsorted portion of the array.
+Swap the minimum element with the first element of the unsorted portion.
+Move the boundary of the sorted portion by one position to the right.
+Repeat steps 2 to 4 until the entire array is sorted.
+
+Example: Selection Sort
+Consider an unsorted array of integers: [8, 3, 5, 2, 9, 1, 4, 6].
+
+Initial array: [8, 3, 5, 2, 9, 1, 4, 6].
+Find the minimum element (1) from the unsorted portion and swap it with the first element (8).
+Sorted portion: [1].
+Unsorted portion: [8, 3, 5, 2, 9, 4, 6].
+Find the minimum element (2) from the unsorted portion and swap it with the second element (3).
+Sorted portion: [1, 2].
+Unsorted portion: [8, 5, 3, 9, 4, 6].
+Repeat this process until the entire array is sorted.
+The sorted array using selection sort: [1, 2, 3, 4, 5, 6, 8, 9].
+
+Applications of Selection Sort:
+Selection Sort is suitable for small lists or arrays where the overhead of more advanced sorting algorithms is not justified.
+It is often used as an educational tool to introduce the concept of sorting algorithms and their efficiency.
+Selection Sort can be used as a sub-routine in more complex algorithms.
+In situations where swapping elements has a high cost, Selection Sort can be advantageous as it minimizes the number of swaps required.
+
+
+2) MINIMUM SPANNING TREE:
+
+Introduction
+The greedy search algorithm, in the context of minimum spanning tree (MST), involves making locally optimal choices at each step to find the overall optimal solution. A minimum spanning tree is a subset of the edges of a connected, weighted graph that connects all the vertices with the minimum total weight.
+
+Algorithm (Prim's Algorithm):
+Start with an arbitrary vertex as the initial vertex.
+Create an empty set to store the minimum spanning tree (MST).
+Initialize a priority queue with the initial vertex and its associated cost (key) as zero.
+While the priority queue is not empty:
+a. Extract the vertex with the minimum cost from the priority queue.
+b. Add the extracted vertex to the MST.
+c. Update the costs of the neighboring vertices not yet in the MST. If the new cost is lower, update the key in the priority queue.
+Repeat steps 4 until all vertices are included in the MST.
+
+Example: 
+Consider a graph with five vertices: A, B, C, D, and E. The edges between the vertices have the following weights:
+A--B (2)
+A--C (6)
+B--C (1)
+B--D (3)
+B--E (7)
+C--D (4)
+D--E (5)
+Using Prim's algorithm, we start with vertex A as the initial vertex. The algorithm proceeds as follows:
+Start with vertex A.
+Add vertex A to the minimum spanning tree (MST).
+Update the costs of the neighboring vertices: B (cost 2) and C (cost 6).
+Select vertex B with the minimum cost (2) and add it to the MST.
+Update the costs of the neighboring vertices: C (cost 1), D (cost 3), and E (cost 7).
+Select vertex C with the minimum cost (1) and add it to the MST.
+Update the costs of the neighboring vertices: D (cost 4) and E (cost 7).
+Select vertex D with the minimum cost (4) and add it to the MST.
+Update the cost of the neighboring vertex E (cost 5).
+Select vertex E with the minimum cost (5) and add it to the MST.
+The minimum spanning tree is formed by the edges: A--B (2), B--C (1), C--D (4), and D--E (5).
+
+Applications of Minimum Spanning Tree:
+Network Design
+Routing Protocols
+Cluster Analysis
+Image Segmentation
+Approximation Algorithms
+
+
+
+3) SINGLE SOURCE SHORTES PATH PROBLEM:
+
+Theory:
+The greedy search algorithm, in the context of the Single-Source Shortest Path Problem, aims to find the shortest path from a single source vertex to all other vertices in a weighted graph. It makes locally optimal choices at each step to achieve the overall optimal solution.
+
+Algorithm (Dijkstra's Algorithm):
+Create a set of unvisited vertices and set the distance to the source vertex as 0 and infinity for all other vertices.
+While there are unvisited vertices:
+a. Choose the vertex with the minimum distance as the current vertex.
+b. Update the distances of its neighboring vertices by considering the edge weights.
+c. Mark the current vertex as visited.
+Repeat step 2 until all vertices are visited.
+
+Single-Source Shortest Path Problem Example:
+Consider a weighted graph with the following vertices and edge weights:
+Vertices: A, B, C, D, E
+Edges and Weights:
+A--B (2)
+A--C (4)
+B--D (3)
+C--D (1)
+C--E (5)
+D--E (2)
+Using Dijkstra's algorithm with vertex A as the source, the algorithm proceeds as follows:
+Set the distance to A as 0 and infinity for all other vertices.
+Choose A as the current vertex.
+Update the distances: B (cost 2) and C (cost 4).
+Mark A as visited.
+Choose B as the current vertex.
+Update the distances: D (cost 5).
+Mark B as visited.
+Choose C as the current vertex.
+Update the distances: D (cost 4) and E (cost 9).
+Mark C as visited.
+Choose D as the current vertex.
+Update the distance to E: 6.
+Mark D as visited.
+Choose E as the current vertex.
+No further updates are possible.
+Mark E as visited.
+The shortest distances from source vertex A to each vertex are as follows:
+A: 0
+B: 2
+C: 4
+D: 4
+E: 6
+
+Applications of Single-Source Shortest Path Problem:
+Routing in Networks: Determining the shortest path between nodes in computer networks or communication systems.
+GPS Navigation: Finding the shortest route between two locations in a map or navigation system.
+Traffic Optimization: Analyzing road networks and optimizing traffic flow based on shortest path calculations.
+Network Analysis: Analyzing social networks, transportation networks, or supply chains to determine efficient paths.
+Pathfinding in Games: Computing the shortest path for characters or objects in video games or simulations.
+
+
+
+4) JOB SCHEDULING PROBLEM:
+
+Theory:
+The greedy search algorithm, in the context of the Job Scheduling Problem, involves making locally optimal choices at each step to schedule jobs efficiently. The goal is to assign jobs to resources or machines while minimizing the overall completion time or maximizing resource utilization.
+
+Algorithm (Greedy Job Scheduling Algorithm):
+Sort the jobs based on their deadlines or processing times.
+Initialize an empty schedule.
+For each job in the sorted order:
+a. If the job can be scheduled without any conflicts, assign it to a resource or machine.
+b. If there is a conflict, skip the job.
+Repeat step 3 until all jobs are processed.
+
+Job Scheduling Problem Example:
+Consider the following set of jobs with their respective deadlines and profits:
+Job: A B C D
+Deadline: 2 1 2 1
+Profit: 100 19 27 25
+Using the greedy job scheduling algorithm, the algorithm proceeds as follows:
+Sort the jobs based on the profit in descending order: A, C, D, B.
+Initialize an empty schedule.
+Assign job A to a resource since it can be scheduled without conflicts.
+Assign job C to a resource since it can be scheduled without conflicts.
+Skip job D since it conflicts with job C.
+Assign job B to a resource since it can be scheduled without conflicts.
+The resulting schedule is: A, C, B.
+
+Applications of Job Scheduling Problem:
+Task Scheduling: Efficiently scheduling tasks in a computing system or operating system.
+Processor Allocation: Assigning tasks or processes to processors or cores in a parallel computing environment.
+Project Management: Scheduling activities or tasks in project management to optimize resource utilization and completion time.
+Job Shop Scheduling: Determining the sequence of jobs in a manufacturing setting to optimize production efficiency.
+Traffic Signal Control: Scheduling the switching patterns of traffic signals to manage traffic flow and minimize congestion.
+
+
+
+5) PRIMS:
+
+introduction:
+Prim's algorithm, a greedy search algorithm, is used to find the minimum spanning tree (MST) of a connected, weighted graph. The MST is a subset of the graph's edges that connects all vertices with the minimum total weight.
+
+Algorithm (Prim's Minimal Spanning Tree Algorithm):
+Start with an arbitrary vertex as the initial vertex.
+Create an empty set to store the minimum spanning tree (MST).
+Initialize a priority queue with the initial vertex and its associated cost (key) as zero.
+While the priority queue is not empty:
+a. Extract the vertex with the minimum cost from the priority queue.
+b. Add the extracted vertex to the MST.
+c. Update the costs of the neighboring vertices not yet in the MST. If the new cost is lower, update the key in the priority queue.
+Repeat steps 4 until all vertices are included in the MST.
+
+Prim's Minimal Spanning Tree Algorithm Example:
+Consider the following weighted graph:
+          2
+    A-----------B
+    |\        /|
+   6| \   3  / |7
+    |  \    /  |
+    |   \  /   |
+    |  /  X    |
+   1| /   |5   | 
+    |/    |   |
+    C-----D---E
+         4
+Using Prim's algorithm, starting with vertex A as the initial vertex, the algorithm proceeds as follows:
+Start with vertex A.
+Add vertex A to the MST.
+Update the costs of the neighboring vertices: B (cost 2) and C (cost 6).
+Extract vertex B (cost 2) from the priority queue and add it to the MST.
+Update the costs of the neighboring vertices: D (cost 3), E (cost 7), and C (cost 5).
+Extract vertex D (cost 3) from the priority queue and add it to the MST.
+Update the costs of the neighboring vertices: B (cost 1), E (cost 4), and C (cost 5).
+Extract vertex B (cost 1) from the priority queue and add it to the MST.
+Update the costs of the neighboring vertices: E (cost 4) and C (cost 5).
+Extract vertex E (cost 4) from the priority queue and add it to the MST.
+Update the costs of the neighboring vertex: C (cost 5).
+Extract vertex C (cost 5) from the priority queue and add it to the MST.
+The MST is complete, including vertices A, B, D, E, and C.
+The minimal spanning tree formed by the edges: A--B (2), B--D (1), D--E (4), E--C (5).
+
+Applications of Prim's Minimal Spanning Tree Algorithm:
+Network Design: Used to design efficient network layouts, such as telecommunication networks or electrical power grids.
+Routing Protocols: Applied in various routing protocols, like the Spanning Tree Protocol (STP) in Ethernet networks.
+Cluster Analysis: Useful in grouping related data points or objects in cluster analysis and data mining applications.
+Image Segmentation: Utilized in image processing and computer vision tasks, such as image segmentation and boundary detection.
+Approximation Algorithms: Used as a subroutine in approximation algorithms for optimization problems.
+
+
+
+6) KRUSKEL:
+
+Theory:
+Kruskal's algorithm is a greedy search algorithm used to find the minimum spanning tree (MST) of a connected, weighted graph. The MST is a subset of the graph's edges that connects all vertices with the minimum total weight.
+
+Algorithm (Kruskal's Minimal Spanning Tree Algorithm):
+Sort all the edges in the graph in non-decreasing order of their weights.
+Create an empty set to store the minimum spanning tree (MST).
+Iterate through the sorted edges:
+a. If adding the current edge to the MST does not create a cycle, add it to the MST.
+b. If adding the edge creates a cycle, skip it.
+Repeat step 3 until all vertices are included in the MST or all edges are processed.
+
+Kruskal's Minimal Spanning Tree Algorithm Example:
+Consider the following weighted graph:
+       2
+    A-----------B
+    |\        /|
+   6| \   3  / |7
+    |  \    /  |
+    |   \  /   |
+    |  /  X    |
+   1| /   |5   | 
+    |/    |   |
+    C-----D---E
+         4
+Using Kruskal's algorithm, the algorithm proceeds as follows:
+
+Sort the edges in non-decreasing order of their weights: (C, D) (B, D) (D, E) (A, B) (A, C) (B, E) (A, D).
+Create an empty set for the MST.
+Iterate through the sorted edges:
+Add edge (C, D) with weight 1 to the MST.
+Add edge (B, D) with weight 3 to the MST.
+Add edge (D, E) with weight 2 to the MST.
+Add edge (A, B) with weight 2 to the MST.
+Skip edge (A, C) as it creates a cycle.
+Skip edge (B, E) as it creates a cycle.
+Skip edge (A, D) as it creates a cycle.
+The resulting minimal spanning tree is formed by the edges: (C, D) (D, E) (A, B).
+
+Applications of Kruskal's Minimal Spanning Tree Algorithm:
+Network Design: Used to design efficient network layouts, such as telecommunication networks or electrical power grids.
+Construction Planning: Optimizing construction projects by determining the minimum cost connections between various sites or components.
+Image Segmentation: Utilized in image processing and computer vision tasks, such as image segmentation and boundary detection.
+Approximation Algorithms: Used as a subroutine in approximation algorithms for optimization problems.
+Cluster Analysis: Helpful in grouping related data points or objects in cluster analysis and data mining applications.
+
+
+
+7) Dijikstra:
+
+Theory:
+Dijkstra's algorithm, a greedy search algorithm, is used to find the shortest path from a single source vertex to all other vertices in a weighted graph. It calculates the minimum distance from the source vertex to each vertex in the graph.
+
+Algorithm (Dijkstra's Minimal Spanning Tree Algorithm):
+Create a set of unvisited vertices and initialize the distance of all vertices from the source vertex as infinity, except for the source vertex itself, which is set to 0.
+While there are unvisited vertices:
+a. Select the vertex with the minimum distance from the set of unvisited vertices.
+b. Mark the selected vertex as visited.
+c. Update the distance of the neighboring vertices of the selected vertex if a shorter path is found.
+Repeat step 2 until all vertices are visited.
+
+Dijkstra's Minimal Spanning Tree Algorithm Example:
+Consider the following weighted graph:
+         2
+    A-----------B
+    |\        /|
+   6| \   3  / |7
+    |  \    /  |
+    |   \  /   |
+    |  /  X    |
+   1| /   |5   | 
+    |/    |   |
+    C-----D---E
+         4
+Using Dijkstra's algorithm, starting from vertex A as the source vertex, the algorithm proceeds as follows:
+
+Set the distance of vertex A to 0 and the distance of all other vertices to infinity.
+Select vertex A as the current vertex.
+Update the distances of its neighboring vertices: B (distance 2), C (distance 6), and D (distance 1).
+Select vertex D with the minimum distance as the new current vertex.
+Update the distances of its neighboring vertices: B (distance 3), C (distance 2), E (distance 5).
+Select vertex C with the minimum distance as the new current vertex.
+Update the distances of its neighboring vertices: D (distance 2).
+Select vertex B with the minimum distance as the new current vertex.
+Update the distance of its neighboring vertex E (distance 5).
+Select vertex E with the minimum distance as the new current vertex.
+No further updates can be made as all vertices are visited.
+The shortest path distances from vertex A to all other vertices are as follows: A (0), B (2), C (6), D (1), E (5).
+
+Applications of Dijkstra's Minimal Spanning Tree Algorithm:
+Routing Algorithms: Used in network routing protocols to find the shortest path between nodes.
+GPS Navigation Systems: Calculating the shortest route between locations in real-time navigation applications.
+Airline Route Planning: Determining the most efficient routes between airports for airline scheduling.
+Internet Protocol (IP) Routing: Used in determining the best path for data packets in IP networks.
+Network Analysis: Analyzing and optimizing network performance in various domains.

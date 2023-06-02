@@ -1,0 +1,85 @@
+N-Queens Problem:
+The N-Queens problem involves placing N queens on an N×N chessboard such that no two queens threaten each other.
+The goal is to find a configuration where no two queens share the same row, column, or diagonal.
+It is a classic constraint satisfaction problem that can be solved using various algorithms, including the Branch and Bound algorithm.
+Branch and Bound Algorithm for N-Queens Problem:
+
+Initialize an empty chessboard.
+Start with the leftmost column and iterate over each row in that column.
+For each row, check if placing a queen at that position violates any constraints.
+If no constraints are violated, mark the position as occupied by the queen.
+Recursively move to the next column and repeat steps 2 to 4 until all columns are processed.
+If a solution is found (all N queens placed without constraint violations), mark it as a valid solution.
+If a constraint violation occurs or all possibilities have been explored in a partial solution, backtrack to the previous column and try different positions.
+Continue backtracking until all possibilities have been explored.
+
+Example for N-Queens Problem:
+Consider solving the N-Queens problem for N = 4.
+
+Algorithm:
+Start with an empty chessboard (4x4).
+Place a queen in the first column at the first row: [Q | | | ].
+Move to the next column and check the second row: [Q | | | ].
+Place a queen in the second column at the second row: [Q | Q | | ].
+Move to the next column and check the first row: [Q | Q | | ].
+Move to the next column and check the first row: [Q | Q | Q | ].
+No position is valid in the third column, so backtrack to the second column.
+Move to the next row and check the third row: [Q | Q | Q | ].
+Place a queen in the third column at the third row: [Q | Q | Q | Q ].
+Move to the next column and check the first row: [Q | Q | Q | Q ].
+Move to the next column and check the first row: [Q | Q | Q | Q ].
+Move to the next row and check the second row: [Q | Q | Q | Q ].
+No position is valid in the fourth column, so backtrack to the third column.
+Move to the next row and check the fourth row: [Q | Q | Q | Q ].
+No position is valid in the fourth column, so backtrack to the second column.
+Move to the next row and check the fourth row: [Q | Q | Q | Q ].
+No position is valid in the third column, so backtrack to the first column.
+Move to the next row and check the second row: [Q | Q | Q | Q ].
+No position is valid in the second column, so backtrack to the first column.
+Move to the next row and check the third row: [Q | Q | Q | Q ].
+No position is valid in the second column, so backtrack to the first column.
+Move to the next row and check the fourth row: [Q | Q | Q | Q ].
+No position is valid in the second column, so backtrack to the first column.
+No more possibilities left, the algorithm terminates.
+The valid solution for N = 4 in the N-Queens problem is 
+[ Q | | | ],
+[ | | Q | ],
+[ | | | Q ],
+[ | Q | | ].
+
+Graph Coloring Problem:
+The graph coloring problem involves assigning colors to the vertices of a graph such that no two adjacent vertices have the same color.
+The goal is to find the minimum number of colors required to color the graph.
+It is a classic constraint satisfaction problem that can be solved using the Backtracking algorithm.
+
+Backtracking Algorithm for Graph Coloring Problem:
+Start with an empty assignment of colors to vertices.
+Choose a vertex and assign it a color.
+Move to the next vertex and check if assigning a color violates any constraints.
+If no constraints are violated, assign a color to the vertex and move to the next vertex.
+Recursively move to the next vertex and repeat steps 3 to 4 until all vertices are processed.
+If a solution is found (all vertices colored without constraint violations), mark it as a valid solution.
+If a constraint violation occurs or all possibilities have been explored in a partial solution, backtrack to the previous vertex and try a different color.
+Continue backtracking until all possibilities have been explored.
+
+Example for Graph Coloring Problem:
+Consider solving the graph coloring problem for the following graph:
+      A---B
+     / \ /
+    C---D
+
+Algorithm:
+Start with an empty assignment of colors.
+Assign color 1 to vertex A: (A: 1).
+Move to vertex B and check if color 1 violates any constraints. No constraint violation occurs.
+Assign color 1 to vertex B: (A: 1, B: 1).
+Move to vertex C and check if color 1 violates any constraints. No constraint violation occurs.
+Assign color 1 to vertex C: (A: 1, B: 1, C: 1).
+Move to vertex D and check if color 1 violates any constraints. No constraint violation occurs.
+Assign color 1 to vertex D: (A: 1, B: 1, C: 1, D: 1).
+All vertices have been assigned colors without constraint violations.
+The minimum number of colors required to color the graph is 1.
+
+Applications:
+N-Queens problem: Relevant in chess, artificial intelligence, and constraint programming.
+Graph coloring problem: Used in scheduling, register allocation in compilers, wireless channel allocation, and timetabling problems.
