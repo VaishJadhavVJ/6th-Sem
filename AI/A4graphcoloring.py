@@ -52,3 +52,24 @@ else:
     print("Graph coloring:")
     for vertex, color in enumerate(coloring):
         print("Vertex", vertex, "- Color", color)
+        
+"""Enter the number of vertices: 6
+Enter the number of edges: 7
+Enter the edges (vertex u, vertex v):
+0 1
+0 2
+1 3
+1 4
+2 4
+3 5
+4 5
+Enter the number of colors: 3"""
+
+"""Enter the number of vertices: 5
+Enter the number of edges: 4
+Enter the edges (vertex u, vertex v):
+0 1
+1 2
+2 3
+3 4
+Enter the number of colors: 2"""
