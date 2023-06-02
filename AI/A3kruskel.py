@@ -79,3 +79,22 @@ if __name__ == "__main__":
     # Find and print the Minimum Spanning Tree using Kruskal's algorithm
     print("Minimum Spanning Tree:")
     graph.kruskal_mst()
+
+#EXPAMPLE OUTPUT:
+"""EXAMPLE 1:
+Enter the number of vertices: 6
+Enter the edge weights (separated by space):
+0 1 3 0 0 0
+1 0 3 6 5 0
+3 3 0 0 4 0
+0 6 0 0 2 6
+0 5 4 2 0 0
+0 0 0 6 0 0"""
+
+"""EXAMPLE 2:
+Enter the number of vertices: 4
+Enter the edge weights (separated by space):
+0 5 3 0
+5 0 0 6
+3 0 0 4
+0 6 4 0"""
