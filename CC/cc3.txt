@@ -1,0 +1,60 @@
+INTRODUCTION:
+Apex is a proprietary programming language developed by Salesforce.com specifically for building applications on the Salesforce platform. Here's a brief explanation:
+- Apex is an object-oriented, strongly typed language similar to Java. It allows developers to customize and extend Salesforce applications with business logic and workflows.
+- It runs on the Salesforce platform, which provides infrastructure, security, data management, and user interface components, making it a powerful tool for building enterprise applications.
+- Apex code can be written directly in the Salesforce Developer Console or in an integrated development environment (IDE) like Salesforce Extensions for Visual Studio Code.
+- It supports various features such as classes, interfaces, triggers, batch processing, web services, and database operations.
+- Apex code can interact with Salesforce data using SOQL (Salesforce Object Query Language) to query and manipulate records in the Salesforce database.
+- It also integrates seamlessly with other Salesforce tools and technologies, such as Lightning Components, Visualforce pages, and Salesforce APIs.
+
+To create an application in Salesforce using Apex, you would typically follow these steps:
+1. Define the data model: Identify the objects and fields required for your application and create them using the Salesforce Object Manager.
+2. Write Apex classes and triggers: Define the business logic and behavior of your application by writing Apex classes and triggers. These classes can handle data manipulation, perform calculations, and enforce custom validation rules.
+3. Create Visualforce pages or Lightning Components: Build the user interface for your application using Visualforce pages or Lightning Components. These components define the layout and functionality that users interact with.
+4. Implement security and access controls: Set up security settings and permissions to control data access and define user roles and profiles. Apex code can be used to enforce additional custom security rules.
+5. Test and debug: Write unit tests to validate the functionality of your Apex code. Salesforce provides tools for testing and debugging Apex code, ensuring that your application behaves as expected.
+Here's an example of a simple Apex class that retrieves and updates a record in Salesforce:
+
+```java
+public class AccountUpdater {
+    public static void updateAccount(String accountId, String newStatus) {
+        Account acc = [SELECT Id, Name, Status__c FROM Account WHERE Id = :accountId];
+        acc.Status__c = newStatus;
+        update acc;
+    }
+}
+```
+
+This code defines a class named `AccountUpdater` with a static method `updateAccount()`. It takes an account ID and a new status as parameters, retrieves the account record using a SOQL query, updates the `Status__c` field, and then saves the changes using the `update` statement.
+
+By leveraging Apex and the Salesforce platform, developers can create powerful and customized applications that meet specific business requirements within the Salesforce ecosystem.
+
+
+LINEAR SEARCH PROGRAM: 
+public class linearSearch {
+    public static void main(Integer key){
+    	System.debug('Linear Search');
+    	integer s = -1;
+    	List<integer> lon = new List<integer> ();
+    	lon.add(3);
+    	lon.add(4);
+    	lon.add(5);
+    	lon.add(6);
+    	System.debug('List: '+lon);
+    	for(integer i = 0; i < lon.size(); i++)
+    	{
+        	if (key == lon[i])
+        	{
+            	s = 1;
+        	}
+    	}
+    	if (s == 1)
+    	{
+        		System.debug('Element Found');
+    	}
+    	else
+    	{
+        		System.debug('Element Not Found');
+    	}
+	}
+}

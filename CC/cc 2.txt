@@ -1,0 +1,56 @@
+STEPS TO DO PRACTICAL:
+
+Go to cloud 
+ Console 
+ Create project  
+ Select project 
+ Click on side bar 
+ Api and services 
+ Enabled api and service 
+ Api library 
+ Search "app engine admin api" 
+ Click on enable 
+ Activate cloud shell 
+ Continue 
+ Open in new window 
+ Cloud shell command👇 
+ "gcloud projects list" 
+ Copy project id 
+ gcloud config set project projectid 
+ Search in new tab "google cloud platform github" 
+ Get project form github and copy link 
+ "git clone projectlink" 
+ ls 
+ cd python-docs-samples/ 
+ ls 
+ cd appengine/ 
+ ls 
+ cd standard_python3 
+ ls 
+ cd hello_world/ 
+ python main.py 
+ Ip address run kara
+
+THEORY TO WRITE:
+
+INTRDUCTION:
+Google App Engine (GAE) is a platform as a service (PaaS) offering by Google that allows developers to build and deploy applications on Google's infrastructure. Here are the main points about Google App Engine:
+GAE provides a fully managed platform for developing and hosting web applications, taking care of infrastructure management, scaling, and system administration tasks.
+It supports multiple programming languages, including Java, Python, Node.js, Go, and more.
+GAE offers automatic scaling and load balancing, ensuring that your application can handle varying traffic and scale seamlessly.
+It provides built-in security features, including access control, firewall rules, and secure data storage options.
+GAE integrates with other Google Cloud services, allowing you to leverage additional functionality like databases, storage, and machine learning.
+Developing applications on GAE follows a serverless model, where you only pay for the resources your application consumes.
+GAE offers development tools and SDKs to streamline the development and deployment process.
+Steps to create a project and application on Google App Engine:
+
+STEPS TO CREATE PROJECT:
+Sign in to the Google Cloud Console (https://console.cloud.google.com/) using your Google account.
+Create a new project in the Cloud Console, providing a name and project ID.
+Enable the App Engine service for your project.
+Install the necessary development tools, such as the Cloud SDK and App Engine SDK, on your local machine.
+Develop your application code using the supported programming language and frameworks.
+Configure your application by defining the app.yaml file, specifying runtime environment, scaling settings, and other parameters.
+Test your application locally using the development server provided by the App Engine SDK.
+Deploy your application to the App Engine by using the gcloud command-line tool or Cloud Console UI.
+Monitor and manage your application's performance, logs, and traffic using the Cloud Console.
